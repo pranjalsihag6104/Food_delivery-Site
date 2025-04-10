@@ -7,7 +7,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 //placing user order from frontend
 const placeOrder=async(req,res)=>{
 
-  const frontend_url="http://localhost:5173"
+  const frontend_url="http://localhost:5173";
 
   try {
     const newOrder=new orderModel({
@@ -101,7 +101,7 @@ const updateStatus=async(req,res)=>{
       res.json({success:true,message:"Status Updated"})
     } catch (error) {
       console.log(error);
-      res.json({success:false,message:"False"})
+      res.json({success:false,message:"Error"})
     }
 }
 
